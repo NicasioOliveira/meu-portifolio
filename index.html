@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicasio Portifólio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f50bc6889.js" crossorigin="anonymous"></script>
+</head>
+<!-- Aqui em head Eu coloquei o título do meu site, juntamente com link para a estilização com css e outro link para acessar os emojis do site fontawesome.-->
+<body>
+    <!-- Coloquei várias divs no meu código para pode separar as estilizações de cada conteúdo do html-->
+<div id="header">
+    <div class="container">
+        <nav> <!-- Dentro da tag nav está todo o conteúdo para navegação do site, assim como a integração da logomarca com o meu nome -->
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contatos</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Quem sou eu?</p> <!-- Aqui é onde fica a primeira tela com a minha apresentação-->
+            <h1>Olá, eu sou <span>Nicasio</span><br>de Oliveira!</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------about-------------- -->
+<div id="about"> <!-- Tudo dentro desta div será a seção usada para falar sobre mim-->
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"> <!-- Essa classe é usada para separar a imagem do conteúdo em colunas lado a lado-->
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2"> <!--A mesma separação de coluna ocorre aqui-->
+                <h1 class="sub-title">Sobre Mim</h1>
+                <p>Eu Estudo Tecnólogo em Análise e Desenvolvimento de Sistemas, apaixonado por programação e determinado a ingressar no mundo profissional da tecnologia. Atualmente, busco minha primeira oportunidade, destacando-me por habilidades em C#, HTML, CSS. Sou autodidata, persistente nos estudos e comprometido em contribuir para o sucesso de projetos. Ansioso para integrar uma equipe colaborativa e aplicar meu entusiasmo em desafios reais. Conecte-se comigo para explorar oportunidades de crescimento mútuo! 🚀💼</p>
+
+                <div class="tab-titles"> <!-- Aqui fica as categorias sobre mim, elas são selecionáveis quando são clicadas-->
+                    <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experiência</p>
+                    <p class="tab-links" onclick="opentab('education')">Educação</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills"> <!-- Aqui fica os conteúdos de habilidades-->
+                    <ul>
+                        <li><span>HTML,CSS e Javascript</span><br>Construção de sites</li>
+                        <li><span>C#</span><br>Criação de projetos simples</li>
+                        <li><span>Pacote Office</span><br>Criação de documentos, planilhas e apresentações</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience"> <!-- Aqui fica os conteúdos de experiência-->
+                    <ul>
+                        <li><span>Este usuário não possui experiência</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education"> <!-- Aqui fica os conteúdos de educação-->
+                    <ul>
+                        <li><span>2020 - 2022</span><br>Ensino Médio Integrado ao Curso Técnico em Redes de Computadores</li>
+                        <li><span>2023 - 2026</span><br>Análise e Desenvolvimento de sistemas no Centro Universitário Internacional Uninter</li>
+                        <li><span>2024</span><br>Bootcamp Decola Tech 2024 da Avanade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------services-------- -->
+<div id="services"> <!-- Esta div inicia a seção de serviços, divididas em colunas lado a lado e com tags de ancoragem para futuramente adicionar mais conteúdos sobre esses serviços.-->
+    <div class="container">
+        <h1 class="sub-title">Meus Serviços</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i> <!--Emoji de tag-->
+                <h2>Web Design</h2>
+                <p>Ofereço serviços de Web Design onde ajudo as pessoas a criarem seus próprios sites na internet. Começamos conversando sobre o que eles querem no site e como desejam que ele se pareça. Então, eu desenho algumas ideias para eles verem e escolherem. Depois, eu uso computadores especiais para criar o site exatamente como eles querem.</p>
+                <a href="#"></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i> <!--Emoji de redimensionamento-->
+                <h2>Edição e Atualização de Conteúdo</h2>
+                <p>Ofereço serviços de edição e atualização de conteúdo em sites existentes, como adicionar novas páginas, atualizar imagens e textos, e fazer ajustes de layout.</p>
+                <a href="#"></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen-button"></i> <!--Emoji de celular-->
+                <h2>Pequenos projetos de Design gráfico</h2>
+                <p>Criar gráficos simples, como logotipos, banners ou imagens de mídia social, usando ferramentas como Canva ou Photoshop.</p>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------portfolio--------- -->
+<div id="portfolio"> <!-- Aqui mostro alguns dos meus projetos lado a lado e quando o mouse passa por cima da imagem, podemos ver uma breve explicação sobre o projeto e um botão para acessá-lo-->
+    <div class="container">
+        <h1 class="sub-title">Meus projetos</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/projeto1.png"> <!--Prévia em imagem do meu projeto-->
+                <div class="layer">
+                    <h3>Calculadora básica com C#</h3>
+                    <p>Código de uma calculadora que faz a conta entre dois números e pode ser selecionada uma das quatro operações básicas. </p>
+                    <a href="https://github.com/NicasioOliveira/Calculadora_CSharp" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <!-- Aqui fica o link do projeto que cria outra aba para ser acessada-->
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/projeto2.png">
+                <div class="layer">
+                    <h3>Site muito simples com HTML</h3>
+                    <p>Este site foi feito como a primeira aula prática que eu fiz com HTML, com foco nas divisões que existem em um site e para enfatizar a divisão eu coloquei cores diferentes. </p>
+                    <a href="https://github.com/NicasioOliveira/Clinica-HTML?tab=readme-ov-file" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/projeto3.png">
+                <div class="layer">
+                    <h3>Design no Figma</h3>
+                    <p>Esta é uma cópia do design da OLX que eu fiz como um trabalho da faculdade na matéria "Design de Interação", ela me ajudou a ter mais noções de como planejar o design de um site ou aplicativo antes de desenvolver a aplicação. </p>
+                    <a href="https://www.figma.com/proto/nYqNJc6riqhvblQecIlHTt/Nicasio_Design_Interacao?type=design&node-id=5-4&t=r6ozhQhkzPTqPyZK-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=88%3A528&mode=design" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ---------contact--------- -->
+<div id="contact"> <!-- A parte de contatos eu coloquei um formulário que envia as informações básicas do contato do usuário diretamente para o meu email -->
+    <div class="container"> <!-- Também foi utilizada estilizações aqui para colocara parte de contatos e o formulário lado a lado -->
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Meus Contatos</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> nicasiooliveira372@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> (81) 98997-5486</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/niicassio_oliveira?igsh=MWNzOHptMHR3cHVocw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/nicasio-de-oliveira
+                    " target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/NicasioOliveira" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/meu-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="181527c5-6c46-48cf-b012-6fb7457d0b6e"> <!-- Chave usada para conectar as informações enviadas do formulário com o meu e-mail que está cadastrado na plataforma-->
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html#contact">
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="credito">
+        <p>Feito Por Nicasio de Oliveira <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+<!-- O primeiro script é usado para criar a barra de navegação pelo celular e os nome da classe são utilizados para estilizar a barra para que fique adequado na tela do celular-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- O segundo script é utilizado para fazer a abertura e o fechamento do menu que aparece no modo de tela do celular-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<!--O último script serve para mostrar uma mensagem ao clicar no botão de enviar formulário, assim a gente é sinalizado que a ação funcionou-->
+<script> 
+    const msg = document.getElementById("msg")
+    msg.innerHTML = "Message sent succesfully"
+    setTimeout(function(){
+        msg.innerHTML = ""
+    },5000)
+    form.reset()
+</script>
+
+</body>
+</html>
